@@ -147,7 +147,7 @@ class JupyterNotifyMagics(Magics):
             try:
                 if last_output is not None and len(str(last_output)):
                     options['body'] = str(last_output)
-            except ValueError:
+            except:
                 pass # can't convert to string. Use default message
 
         # allow notify to stop autonotify
